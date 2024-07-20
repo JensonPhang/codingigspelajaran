@@ -1,0 +1,47 @@
+ * {
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+
+ }
+
+ div {
+     border: 1px solid black;
+     height: 100px;
+     width: 100px;
+     border-radius: 8px;
+     margin: 0 auto;
+     margin-bottom: 20px;
+     margin-top: 10px;
+
+
+
+ }
+
+ div.red {
+     background-color: red;
+ }
+
+ div.green {
+     background-color: green;
+ }
+
+ div.blue {
+     background-color: blue;
+ }
+
+ h1 {
+     font-family: " Kalnia Glaze", serif;
+     font-optical-sizing: auto;
+     font-weight: 20px;
+     font-style: normal;
+     font-variation-settings:
+         "wdth" 100;
+     text-align: center;
+     line-height: 100px;
+     color: aliceblue;
+ }
+
+ .circle {
+     border-radius: 50%;
+ }
