@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignatius Global School</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            min-height: 200vh;
+            overflow-x: hidden;
+        }
+        div.headertexts{
+            position: absolute;
+            left: 45vw;
+            top: 3vw;
+        }
+        div.headertexts span{
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0 15px;
+            font-size: 15px;
+            color: rgb(75, 75, 75);
+        }
+        div.logo{
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            left: 90px;
+            top: 40px;
+        }
+        div.header{
+            width: 100%;
+            height: 20vh;
+        }
+        div.header b{
+            font-size: 30px;
+            color: blue;
+            position: relative;
+            top: 50px;
+            left: 180px;
+        }
+        h2{
+            letter-spacing: 2px;
+            font-weight: 100;
+            font-size: 15px;
+            position: relative;
+            top: -55px;
+            left: 180px;
+        }
+        div.navOps a{
+            text-decoration: none;
+            color: white;   
+            margin:5px;
+            position: relative;
+            top: 20px;  
+        }
+        div.navOps a:hover{
+            text-decoration: underline;
+        }
+        div.nav{
+            position: sticky;
+            background-color: rgb(203, 0, 12);
+            width: 100%;
+            height: 8vh;
+            top: 0;
+            z-index: 3;
+        }
+        div.navOps{
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 20%;
+        }
+        div.imagebox{
+            background-color: lightblue;
+            width: 80vw;
+            height: 28vw;
+            margin: 0 auto;
+            display: flex;
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+        div.imagebox img{
+            transition: left 0.5s;
+            position: relative;
+            width: 100%;
+        }
+        div.bluebox{
+            background-color: rgb(139, 201, 221);
+            width: 80vw;
+            height: 11vw;
+            margin: 0 auto;
+        }
+        div.darkbox{
+            position: relative;
+            top: 7.5vw;
+            height: 3.5vw;
+            width: 100%;
+            background-color: rgb(16, 158, 205);
+        }
+        div.orangebox{
+            background-color: orange;
+            line-height: 55px;
+            height: 100%;
+            width: 14%;
+            color: white;
+            text-align: center;
+        }
+        h3{
+            color: white;
+            font-weight: 100;
+            position: relative;
+            top: -2.5vw;
+            left: 12vw;
+        }
+        div.navBtns{
+            width: 100%;
+            height: 10px;
+            position: relative;
+            top: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div.navBtns div{
+            border-radius: 4px;
+            width: 40px;
+            margin: 0 5px;
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.526);
+            transition: background-color 0.3s;
+        }
+        div.navBtns div:hover{
+            cursor: pointer;
+            background-color: orange;
+        }
+        div.textbox{
+            text-align: center;
+        }
+        div.textbox b{
+            color: white;
+            font-weight: 100;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            position: relative;
+            top: 3vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="headertexts">
+            <span>highschool.igs@gmail.com - admsmaigs17@gmail.com</span><span>(0711)377159 - 087790007105</span>
+        </div>
+        <div class="logo">
+            <img src="logoIGS.png" alt="" width="100%">
+        </div>
+        <b class="title">IGNATIUS GLOBAL SCHOOL</b>
+    </div>
+    <h2>The first choice to the best future</h2>
+    <div class="nav">
+        <div class="navOps">
+        <a href="">BERANDA</a><a href="">PROFIL</a><a href="">DIREKTORI PPDB 2021/2022</a><a href="">GALERI</a><a href="">PROFIL</a><a href="">E-LEARNING</a><a href="">AP TEST</a><a href="">PANDUAN MOODLE</a></div>
+    </div>
+    <div class="imagebox">
+        <img class="imageslide" src="background1IGS.png" alt="broken">
+        <img class="imageslide" src="background2IGS.jpg" alt="broken">
+    </div>
+    <div class="bluebox">
+        <div class="textbox">
+        <b class="label"></b></div>
+        <div class="navBtns">
+            <div onclick="Change(1)"></div>
+            <div onclick="Change(2)"></div>
+        </div>
+        <div class="darkbox">
+            <div class="orangebox">KUTIPAN</div>
+            <h3>IGS Mencetak Generasi Mandiri Berintegritas & Berwawasan Global</h3>
+        </div> 
+    </div> 
+    <script>
+        let imageslide = document.querySelectorAll(".imageslide");
+        let label = document.querySelector(".label");
+        function Change(x){
+            if (x==1){
+                for(i=0; i<2; i++){
+                    imageslide[i].style.left = 0;
+                    label.innerHTML = "Gedung Baru SMA Ignatius Global School";
+                }
+            }
+            if (x==2){
+                for(i=0; i<2; i++){
+                    imageslide[i].style.left = "-80vw";
+                    label.innerHTML = "PPDB 2024-2025";
+                }
+            }
+        }
+        Change(1);
+    </script> 
+</body>
+</html> 
